@@ -814,64 +814,41 @@ footer p { font-size: 0.78rem; }
 }
 
 /* =============================================
-   RESPONSIVE — MOBILE (≤640px)
+   RESPONSIVE — MOBILE (max 640px)
    ============================================= */
 @media (max-width: 640px) {
-    /* Show hamburger, hide desktop links */
     .hamburger { display: flex; }
 
     .nav-links {
-        /* Hidden state */
-        display: flex;
-        flex-direction: column;
+        display: none;
         position: fixed;
         top: 0;
         left: 0;
         right: 0;
         bottom: 0;
         background: var(--mobile-menu-bg);
-        backdrop-filter: none;
-        -webkit-backdrop-filter: none;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 8px;
+        gap: 16px;
         z-index: 150;
-        padding: 80px 32px 40px;
-        /* Hide by default */
-        opacity: 0;
-        pointer-events: none;
-        transform: translateY(-8px);
-        transition: opacity 0.25s ease, transform 0.25s ease;
     }
-    .nav-links.open {
-        opacity: 1;
-        pointer-events: auto;
-        transform: translateY(0);
-    }
+
+    .nav-links.open { display: flex; }
+
     .nav-links a {
-        font-size: 1.1rem;
+        font-size: 1.3rem;
         font-weight: 600;
-        padding: 12px 28px;
-        width: 100%;
-        max-width: 260px;
-        justify-content: center;
-        border: 1px solid var(--glass-border);
-        border-radius: 12px;
-        background: var(--glass);
+        padding: 10px 24px;
+        background: none;
+        border: none;
+        border-radius: 0;
+        width: auto;
+        max-width: none;
     }
-    .nav-links a:hover {
-        background: var(--accent-glow);
-        border-color: var(--border-hover);
-    }
+
     .theme-btn {
         margin-left: 0;
-        padding: 10px 20px;
-        width: 100%;
-        max-width: 260px;
-        justify-content: center;
-        display: flex;
-        align-items: center;
-        gap: 8px;
     }
 
     /* Layout */
