@@ -897,3 +897,105 @@ footer p { font-size: 0.78rem; }
     .materials-grid { grid-template-columns: 1fr; }
     .chem-grid { grid-template-columns: 1fr; }
 }
+
+/* =============================================
+   WIP BANNER & NOTES
+   ============================================= */
+.wip-banner {
+    background: rgba(234, 179, 8, 0.06);
+    border: 1px solid rgba(234, 179, 8, 0.25);
+    border-left: 3px solid #eab308;
+    border-radius: 16px;
+    padding: 28px 28px 24px;
+    margin: 36px 0 0;
+}
+
+.wip-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.wip-header i {
+    color: #eab308;
+    font-size: 1rem;
+}
+
+.wip-header span {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #eab308;
+}
+
+.wip-sub {
+    font-size: 0.85rem;
+    color: var(--text);
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.wip-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.wip-item {
+    background: rgba(234, 179, 8, 0.04);
+    border: 1px solid rgba(234, 179, 8, 0.15);
+    border-radius: 10px;
+    padding: 16px 18px;
+}
+
+.wip-item-title {
+    font-weight: 700;
+    font-size: 0.82rem;
+    color: #ca8a04;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+[data-theme="light"] .wip-item-title { color: #92400e; }
+
+.wip-item p {
+    font-size: 0.83rem;
+    margin: 0;
+    line-height: 1.55;
+}
+
+/* Inline WIP note (inside tech steps) */
+.wip-note {
+    background: rgba(234, 179, 8, 0.05);
+    border: 1px solid rgba(234, 179, 8, 0.2);
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin: 16px 0;
+}
+
+.wip-note-title {
+    font-weight: 700;
+    font-size: 0.82rem;
+    color: #ca8a04;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+[data-theme="light"] .wip-note-title { color: #92400e; }
+
+.wip-note p {
+    font-size: 0.84rem;
+    margin: 0;
+    line-height: 1.55;
+}
+
+@media (max-width: 640px) {
+    .wip-grid { grid-template-columns: 1fr; }
+    .wip-banner { padding: 20px 16px; }
+}
