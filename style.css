@@ -899,103 +899,73 @@ footer p { font-size: 0.78rem; }
 }
 
 /* =============================================
-   WIP BANNER & NOTES
+   WIP PILL (hero)
    ============================================= */
-.wip-banner {
-    background: rgba(234, 179, 8, 0.06);
-    border: 1px solid rgba(234, 179, 8, 0.25);
-    border-left: 3px solid #eab308;
-    border-radius: 16px;
-    padding: 28px 28px 24px;
-    margin: 36px 0 0;
-}
-
-.wip-header {
-    display: flex;
+.wip-pill {
+    display: inline-flex;
     align-items: center;
-    gap: 10px;
-    margin-bottom: 10px;
-}
-
-.wip-header i {
-    color: #eab308;
-    font-size: 1rem;
-}
-
-.wip-header span {
-    font-size: 0.72rem;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: #eab308;
-}
-
-.wip-sub {
-    font-size: 0.85rem;
-    color: var(--text);
+    gap: 8px;
+    background: rgba(234, 179, 8, 0.08);
+    border: 1px solid rgba(234, 179, 8, 0.3);
+    border-radius: 100px;
+    padding: 7px 18px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #ca8a04;
     margin-bottom: 20px;
-    line-height: 1.6;
 }
 
-.wip-grid {
+[data-theme="light"] .wip-pill {
+    background: rgba(234, 179, 8, 0.1);
+    color: #92400e;
+    border-color: rgba(234, 179, 8, 0.4);
+}
+
+.wip-pill i { font-size: 0.78rem; }
+
+/* =============================================
+   RESEARCH CHALLENGES (tech page)
+   ============================================= */
+.research-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 14px;
 }
 
-.wip-item {
-    background: rgba(234, 179, 8, 0.04);
-    border: 1px solid rgba(234, 179, 8, 0.15);
-    border-radius: 10px;
-    padding: 16px 18px;
-}
-
-.wip-item-title {
-    font-weight: 700;
-    font-size: 0.82rem;
-    color: #ca8a04;
-    margin-bottom: 8px;
-    display: flex;
-    align-items: center;
-    gap: 7px;
-}
-
-[data-theme="light"] .wip-item-title { color: #92400e; }
-
-.wip-item p {
-    font-size: 0.83rem;
-    margin: 0;
-    line-height: 1.55;
-}
-
-/* Inline WIP note (inside tech steps) */
-.wip-note {
+.research-card {
     background: rgba(234, 179, 8, 0.05);
     border: 1px solid rgba(234, 179, 8, 0.2);
-    border-radius: 10px;
-    padding: 16px 18px;
-    margin: 16px 0;
+    border-radius: 14px;
+    padding: 24px 20px;
+    transition: border-color 0.25s, transform 0.25s;
 }
 
-.wip-note-title {
-    font-weight: 700;
-    font-size: 0.82rem;
+.research-card:hover {
+    border-color: rgba(234, 179, 8, 0.45);
+    transform: translateY(-3px);
+}
+
+.research-icon {
+    font-size: 1.2rem;
     color: #ca8a04;
-    margin-bottom: 8px;
-    display: flex;
-    align-items: center;
-    gap: 7px;
+    margin-bottom: 10px;
 }
 
-[data-theme="light"] .wip-note-title { color: #92400e; }
+[data-theme="light"] .research-icon { color: #92400e; }
 
-.wip-note p {
-    font-size: 0.84rem;
+.research-card h4 {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    color: var(--heading);
+}
+
+.research-card p {
+    font-size: 0.83rem;
     margin: 0;
-    line-height: 1.55;
+    line-height: 1.6;
 }
 
 @media (max-width: 640px) {
-    .wip-grid { grid-template-columns: 1fr; }
-    .wip-banner { padding: 20px 16px; }
+    .research-grid { grid-template-columns: 1fr; }
+    .wip-pill { font-size: 0.76rem; padding: 6px 14px; text-align: center; }
 }
